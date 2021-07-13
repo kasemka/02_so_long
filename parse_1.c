@@ -68,7 +68,7 @@ void	check_other_comp(t_solong *prm)
 		}
 		i++;
 	}
-	if (pos_coll_exit[0] == 0 || pos_coll_exit[1] == 0 || pos_coll_exit[2] == 0)
+	if (pos_coll_exit[0] != 1 || pos_coll_exit[1] < 1 || pos_coll_exit[2] != 1)
 		msg_map_invalid();
 }
 
