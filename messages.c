@@ -1,10 +1,4 @@
-#include "solong.h"
-
-// void	msg_error(void)
-// {
-// 	write(2, "Error\n", 6);
-// 	exit(EXIT_FAILURE);
-// }
+#include "so_long.h"
 
 void	msg_malloc_fail(void)
 {

@@ -1,4 +1,4 @@
-#include "solong.h"
+#include "so_long.h"
 
 int	isinlist(t_coordinates *component, int x, int y)
 {
@@ -38,4 +38,33 @@ void	remove_list_srtuct(t_coordinates **component, int x, int y)
 			start->next = temp->next;
 	}
 	free (temp);
+}
+
+t_coordinates	*create_list(char **map, char c)
+{
+	int				i;
+	int				j;
+	t_coordinates	*first;
+	t_coordinates	*tmp;
+
+	first = NULL;
+	i = -1;
+	while (map[++i] != NULL)
+	{
+		j = -1;
+		while (map[i][++j] != '\0')
+		{
+			if (map[i][j] == c)
+			{
+				tmp = malloc(sizeof(t_coordinates));
+				if (tmp == NULL)
+					msg_malloc_fail();
+				tmp->x = j;
+				tmp->y = i;
+				tmp->next = first;
+				first = tmp;
+			}
+		}
+	}
+	return (first);
 }

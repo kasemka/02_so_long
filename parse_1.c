@@ -1,24 +1,4 @@
-#include "solong.h"
-
-int	map_len(int fd_first_read)
-{
-	int		fd_res;
-	int		len;
-	char	buf;
-
-	len = 0;
-	fd_res = read(fd_first_read, &buf, 1);
-	while (fd_res > 0)
-	{
-		len++;
-		fd_res = read(fd_first_read, &buf, 1);
-	}
-	if (fd_res < 0)
-		msg_read_error();
-	if (len == 0)
-		msg_map_invalid();
-	return (len);
-}
+#include "so_long.h"
 
 void	check_calculate_size(t_solong *prm)
 {
@@ -37,8 +17,8 @@ void	check_calculate_size(t_solong *prm)
 		msg_map_invalid();
 	else
 	{
-		prm->map_w = width;
-		prm->map_h = heigh;
+		prm->wid = width;
+		prm->hieg = heigh;
 	}
 }
 
@@ -55,14 +35,13 @@ void	check_components(t_solong *prm)
 		{
 			if (ft_strchr("01CEP", prm->map[i][j]) == NULL)
 				msg_map_invalid();
-
 			j++;
 		}
-		
 		j = 0;
 		i++;
 	}
 }
+
 // check for at least 1 start position, 1 collectible, and 1 exit
 void	check_other_comp(t_solong *prm)
 {
@@ -71,12 +50,12 @@ void	check_other_comp(t_solong *prm)
 	int		j;
 
 	i = 0;
-	j = 0;
 	pos_coll_exit[0] = 0;
 	pos_coll_exit[1] = 0;
 	pos_coll_exit[2] = 0;
 	while (prm->map[i] != 0)
 	{
+		j = 0;
 		while (prm->map[i][j])
 		{
 			if (prm->map[i][j] == 'P')
@@ -87,7 +66,6 @@ void	check_other_comp(t_solong *prm)
 				pos_coll_exit[2]++;
 			j++;
 		}
-		j = 0;
 		i++;
 	}
 	if (pos_coll_exit[0] == 0 || pos_coll_exit[1] == 0 || pos_coll_exit[2] == 0)
@@ -101,16 +79,16 @@ void	check_walls(t_solong *prm)
 
 	i = 0;
 	j = 0;
-	while (i < prm->map_h)
+	while (i < prm->hieg)
 	{
 		while (prm->map[i][j] != 0)
 		{
-			if (i == 0 || i == prm->map_h - 1)
+			if (i == 0 || i == prm->hieg - 1)
 			{
 				if (ft_strchr("1", prm->map[i][j]) == NULL)
 					msg_map_invalid();
 			}
-			if (i > 0 && i < prm->map_h - 1 && (j == 0 || j == prm->map_w - 1))
+			if (i > 0 && i < prm->hieg - 1 && (j == 0 || j == prm->wid - 1))
 			{
 				if (ft_strchr("1", prm->map[i][j]) == NULL)
 					msg_map_invalid();
@@ -124,27 +102,27 @@ void	check_walls(t_solong *prm)
 
 void	parse(int argc, char **argv, t_solong *prm)
 {
-	int		fd_first_read;
-	int		fd_second_read;
+	int		fd;
 	int		fd_res;
 	char	*line;
 	int		len;
 
 	if (argc != 2)
 		msg_check_argv();
-	fd_first_read = open(argv[1], O_RDONLY);
-	fd_second_read = open(argv[1], O_RDONLY);
-	len = map_len(fd_first_read);
+	fd = open(argv[1], O_RDONLY);
+	len = map_len(fd);
 	line = malloc(len);
 	if (line == NULL)
 		msg_malloc_fail();
-	fd_res  = read(fd_second_read, line, len);
+	fd = open(argv[1], O_RDONLY);
+	fd_res = read(fd, line, len);
+	close(fd);
 	if (fd_res < 0)
 		msg_read_error();
 	line[len] = '\0';
-	prm->map = ft_split(line, '\n');
-	if (prm->map == NULL)
-		msg_malloc_fail();
+	check_empty_line(line);
+	prm->map = ft_split_with_msg(line, '\n');
+	free(line);
 	check_calculate_size(prm);
 	check_components(prm);
 	check_walls(prm);

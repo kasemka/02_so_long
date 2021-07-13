@@ -1,4 +1,4 @@
-#include "solong.h"
+#include "so_long.h"
 
 static int	ft_rowlen(const char *s, char c)
 {
@@ -63,10 +63,11 @@ char	**ft_free_malloc(char **snew, int i)
 		i--;
 	}
 	free(snew);
+	msg_malloc_fail();
 	return (NULL);
 }
 
-char	**ft_split(char const *s, char c)
+char	**ft_split_with_msg(char const *s, char c)
 {
 	char		**str;
 	int			rows;
@@ -76,7 +77,7 @@ char	**ft_split(char const *s, char c)
 	rows = ft_chrnum(s, c);
 	str = malloc(sizeof(char *) * (rows + 1));
 	if (!str)
-		return (0);
+		msg_malloc_fail();
 	while (i < rows)
 	{
 		while (*s == c && *s)

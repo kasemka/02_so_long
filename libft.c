@@ -1,4 +1,4 @@
-#include "solong.h"
+#include "so_long.h"
 
 size_t	ft_strlen(const char *s)
 {
@@ -9,7 +9,6 @@ size_t	ft_strlen(const char *s)
 		ps++;
 	return (ps - s);
 }
-
 
 char	*ft_strchr(const char *s, int c)
 {

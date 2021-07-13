@@ -1,12 +1,17 @@
 NAME = so_long
 
-SRC = solong.c\
-messages.c\
-ft_split.c\
+SRC = so_long.c\
+parse_1.c\
+parse_2.c\
+record_list.c\
+image_init.c\
+commands.c\
+render_map.c\
+ft_split_with_msg.c\
 libft.c\
-parse.c\
-func_list.c\
-temporary_func.c
+list_funcs.c\
+messages.c
+
 
 HEADER = solong.h
 OBJ = $(SRC:.c=.o)
