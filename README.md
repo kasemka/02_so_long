@@ -1,4 +1,4 @@
-# 03_so_long
+so_long
 
 Creating 2D game using miniLibX.
 The player’s goal is to help panda to collect bamboo presented on map then escape to air balloon with minimal movement.
