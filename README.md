@@ -10,3 +10,7 @@ Detailed information is in en.subject.pdf
 
 ![panda_exit](https://user-images.githubusercontent.com/83021442/125600305-be0ba38e-3081-4f07-bb02-e040020072e4.jpg)
 
+Images were taken:
+<div>Icons made by <a href="" title="Linector">Linector</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+
