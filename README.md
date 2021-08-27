@@ -6,6 +6,9 @@ At every move the current number of movements must be displayed in the shell.
 
 Detailed information is in [en.subject.pdf](https://github.com/lelle-asem/03_so_long/blob/master/en.subject.pdf)
 
+Runnig on MasOS:
+After cloning all files, type "make" in the shell. After compilation done, exceute it with map  ("./so_long map.ber").
+
 ![panda](https://user-images.githubusercontent.com/83021442/125600024-42550dcf-ab67-4ea1-b605-01678299189f.jpg)
 
 ![panda_exit](https://user-images.githubusercontent.com/83021442/125600305-be0ba38e-3081-4f07-bb02-e040020072e4.jpg)
