@@ -10,11 +10,9 @@ Detailed information is in en.subject.pdf
 
 ![panda_exit](https://user-images.githubusercontent.com/83021442/125600305-be0ba38e-3081-4f07-bb02-e040020072e4.jpg)
 
-Images were taken:
-
-panda: <div>Icons made by <a href="" title="Linector">Linector</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-bamboo: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-mountain: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
-[air balloon](https://www.flaticon.com/authors/good-ware)
-backgound: 
-https://www.color-name.com/tea-green.color
+Used images:  
+[panda](https://www.flaticon.com/free-icon/panda_2419544?term=panda&page=2&position=24&page=2&position=24&related_id=2419544&origin=search)  
+[bamboo](https://www.flaticon.com/free-icon/bamboo_588414?term=bamboo&page=1&position=21&page=1&position=21&related_id=588414&origin=search)  
+[mountain](https://www.flaticon.com/free-icon/mountain_619131?term=mountain&page=1&position=24&page=1&position=24&related_id=619131&origin=search)  
+[air balloon](https://www.flaticon.com/free-icon/hot-air-balloon_4778038?term=air%20balloon&page=1&position=35&page=1&position=35&related_id=4778038&origin=search)  
+[backgound](https://www.color-name.com/tea-green.color)
