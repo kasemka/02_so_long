@@ -1,4 +1,4 @@
-# so_long
+## so_long
 
 Creating 2D game using miniLibX.
 The player’s goal is to help panda to collect bamboo presented on map then escape to air balloon with minimal movement.
@@ -11,6 +11,7 @@ Detailed information is in en.subject.pdf
 ![panda_exit](https://user-images.githubusercontent.com/83021442/125600305-be0ba38e-3081-4f07-bb02-e040020072e4.jpg)
 
 Images were taken:
+
 panda: <div>Icons made by <a href="" title="Linector">Linector</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 bamboo: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 mountain: <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
