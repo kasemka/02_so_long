@@ -4,7 +4,7 @@ Creating 2D game using miniLibX.
 The player’s goal is to help panda to collect bamboo presented on map then escape to air balloon with minimal movement.
 At every move the current number of movements must be displayed in the shell.
 
-<<!-Detailed information is in [en.subject.pdf](https://github.com/lelle-asem/03_so_long/blob/master/en.subject.pdf)-->
+<!-- Detailed information is in [en.subject.pdf](https://github.com/lelle-asem/03_so_long/blob/master/en.subject.pdf) -->
 
 Runnig on MasOS:
 After cloning all files, type "make" in the shell. After compilation done, exceute it with map  ("./so_long map.ber").
